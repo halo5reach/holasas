@@ -1,0 +1,6 @@
+1. agregar las asignaturas de los aprendices
+2. agregar las competencia despues de crear un programa
+3. agregar las notas de los aprendices
+4. realizar los certificados con conexion a base de datos
+5. arreglar el menu izquierdo
+6. buscar solucciones para el registro de usuarios

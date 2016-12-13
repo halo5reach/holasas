@@ -1,0 +1,78 @@
+.selectMenu {
+  position: relative;
+  width: 200px;
+  font-family: sans-serif,helvetica;
+  color: white;
+  transform-style: preserve-3d;
+  perspective: 1500;
+}
+.selectMenu span {
+  height: inherit;
+  margin-left: 20px;
+  line-height: 35px;
+}
+.selectMenu .front,
+.selectMenu .back {
+  -moz-transition: all 0.32s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  -webkit-transition: all 0.32s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: all 0.32s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.selectMenu .front {
+  margin-top: 0px;
+  width: 200px;
+  height: 35px;
+  font-size: 19px;
+  background-color: #325ec7;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  cursor: pointer;
+}
+.selectMenu .front:after {
+  position: absolute;
+  content: "";
+  top: 16px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+}
+.selectMenu .back {
+  -moz-transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.selectMenu ul {
+  position: absolute;
+  width: calc(100% - 40px);
+  top: -140px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.32);
+  list-style: none;
+  z-index: 1;
+}
+.selectMenu ul li {
+  color: #4471dd;
+  line-height: 35px;
+  cursor: pointer;
+}
+.selectMenu ul li:hover {
+  background: #e7e7e7;
+}
+.selectMenu.flip .front {
+  -moz-transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+.selectMenu.flip .back {
+  -moz-transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
